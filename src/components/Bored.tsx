@@ -54,7 +54,7 @@ export default function Bored() {
 		key: '',
 	})
 	async function boredClick() {
-		const response = await fetch('http://www.boredapi.com/api/activity/')
+		const response = await fetch('https://www.boredapi.com/api/activity/')
 		const result = await response.json()
 		console.log(result)
 		setBored(result)
