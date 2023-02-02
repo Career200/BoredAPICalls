@@ -94,10 +94,11 @@ export default function Bored() {
 				) : (
 					<StyledSliderParent>
 						<p> Easy/Hard?</p>
-						<div className="sliderScale">
+						<div className="sliderScale" style={{ textAlign: 'center' }}>
+							{(bored.accessibility * 100).toString()}%
 							<div
 								className="sliderScaleIndicator"
-								style={{ width: `calc(${bored.accessibility} * 98% )` }}
+								style={{ width: `calc(${bored.accessibility} * 99% )` }}
 							></div>
 						</div>
 					</StyledSliderParent>
@@ -142,10 +143,11 @@ export default function Bored() {
 									'linear-gradient(to right, #2b762b, #47842f, #629234, #7ca03a, #96ad41, #a4a837, #b1a230, #be9b2d, #be801f, #ba641b, #b3471f, #a82525)',
 							}}
 						>
+							{(bored.price * 100).toString()}%
 							<div
 								className="sliderScaleIndicator"
 								style={{
-									width: `calc(${bored.price} * 98% )`,
+									width: `calc(${bored.price} * 99% )`,
 								}}
 							></div>
 						</div>
