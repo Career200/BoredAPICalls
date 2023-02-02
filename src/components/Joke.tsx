@@ -10,16 +10,16 @@ const Header = styled.header`
 	width: 50%;
 	transform: translate(-50%, 50%);
 	.joke {
-		font-size: 22px;
+		font-size: 1.1em;
 	}
 	.setup {
-		font-size: 22px;
+		font-size: 1.1empx;
 	}
 	.delivery {
 		width: fit-content;
 		min-height: 40px;
 		margin: 0 auto;
-		font-size: 25px;
+		font-size: 1.2em;
 		background: transparent
 			linear-gradient(
 				to right,
@@ -39,6 +39,11 @@ const Header = styled.header`
 		-webkit-background-clip: text;
 		color: transparent;
 		text-align: center;
+	}
+	@media (max-width: 576px) {
+		top: -50px;
+		font-size: 12px;
+		width: 100%;
 	}
 `
 
