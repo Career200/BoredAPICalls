@@ -100,16 +100,16 @@ Error generating stack: `+o.message+`
 	width: 50%;
 	transform: translate(-50%, 50%);
 	.joke {
-		font-size: 22px;
+		font-size: 1.1em;
 	}
 	.setup {
-		font-size: 22px;
+		font-size: 1.1empx;
 	}
 	.delivery {
 		width: fit-content;
 		min-height: 40px;
 		margin: 0 auto;
-		font-size: 25px;
+		font-size: 1.2em;
 		background: transparent
 			linear-gradient(
 				to right,
@@ -129,5 +129,10 @@ Error generating stack: `+o.message+`
 		-webkit-background-clip: text;
 		color: transparent;
 		text-align: center;
+	}
+	@media (max-width: 576px) {
+		top: -50px;
+		font-size: 12px;
+		width: 100%;
 	}
 `;function Tm(){const[e,t]=be.useState({error:!0,joke:"Sorry, something went wrong! Try to reload the window (and see the API response in the console)",setup:"",delivery:""});be.useEffect(()=>{n(),console.log("useEffect")},[]);async function n(){const l=await(await fetch("https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,racist,sexist,explicit")).json();return t(l)}return D.jsx(zm,{className:"jokebox",children:D.jsxs("p",{children:["Joke of the session:",D.jsx("p",{className:"joke",children:e.joke}),D.jsx("p",{className:"setup",children:e.setup}),D.jsx("p",{className:"delivery",children:e.delivery})]})})}function $m(){return D.jsxs("div",{className:"App",children:[D.jsx(Tm,{}),D.jsx(Nm,{})]})}ri.createRoot(document.getElementById("root")).render(D.jsx(Lr.StrictMode,{children:D.jsx($m,{})}));
